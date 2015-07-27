@@ -19,6 +19,8 @@ Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'Valloric/YoucompleteMe'
 Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+
 
 
 
@@ -41,6 +43,12 @@ color solarized
 "   x for close node
 "   ctrl+ww for move between windows
 map <C-e> :NERDTreeToggle<CR> 
+
+"Smart Airline
+"use :tabnew to create new tab
+let g:airline#extensions#tabline#enabled = 1
+
+
 
 "RESTART VIMRC
 ":so %
