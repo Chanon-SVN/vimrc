@@ -17,7 +17,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
-
+Plugin 'Valloric/YoucompleteMe'
+Plugin 'scrooloose/syntastic'
 
 
 
@@ -41,6 +42,11 @@ color solarized
 "   ctrl+ww for move between windows
 map <C-e> :NERDTreeToggle<CR> 
 
+"RESTART VIMRC
+":so %
+":so $MYVIMRC
+
+"VUNDLE USER GUDIE
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
