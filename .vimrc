@@ -1,10 +1,21 @@
 set nocompatible              " be iMproved, required
+set syntax=on
+set ruler
 set number
 filetype off                  " required
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+"I move cursor to the first of line and enter insert mode
+"A move cursor to the end of line and enter insert mode
+nnoremap <CR> :noh<CR>
+
+"Disable Arrow
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,8 +31,11 @@ Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'Valloric/YoucompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
-
-
+Plugin 'elzr/vim-json'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'kana/vim-arpeggio'
 
 
 
@@ -47,6 +61,28 @@ map <C-e> :NERDTreeToggle<CR>
 "Smart Airline
 "use :tabnew to create new tab
 let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
+"Easy Motion
+"Use \\f follow by character under cusor
+map <Leader> <Plug>(easymotion-prefix)
+let mapleader = " " 
+
+"Arpeggio config
+  "InsertMode
+call arpeggio#map('i', '', 0, 'jk', '<Esc>')
+  "VisualMode
+call arpeggio#map('x', '', 0, 'jk', '<Esc>')
+"Default Arpeggio
+call arpeggio#map('i', '', 0, 'fu', 'function')
+call arpeggio#map('i', '', 0, 'pr', 'print')
+call arpeggio#map('i', '', 0, 're', 'return ;<Left>')
+"JavaScript arpeggio
+call arpeggio#map('i', '', 0, 'co', 'console.log();<Left><Left>')
+"Python arpeggio
+call arpeggio#map('i', '', 0, 'se', 'self.')
+
+
 
 
 
