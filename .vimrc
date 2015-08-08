@@ -28,7 +28,6 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'Valloric/YoucompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'elzr/vim-json'
@@ -38,6 +37,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'kana/vim-arpeggio'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
+Plugin 'Valloric/YoucompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
