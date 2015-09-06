@@ -37,6 +37,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'kana/vim-arpeggio'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
+Plugin 'mattn/emmet-vim'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,22 +69,25 @@ set laststatus=2
 map <Leader> <Plug>(easymotion-prefix)
 let mapleader = " " 
 
-""Arpeggio config
-""n : normal , i:insert , x:visual
-"  "InsertMode
-"call arpeggio#map('i', '', 0, 'jk', '<Esc>')
-"  "VisualMode
-"call arpeggio#map('x', '', 0, 'jk', '<Esc>')
-""Default Arpeggio
-"call arpeggio#map('i', '', 0, 'fu', 'function')
-"call arpeggio#map('i', '', 0, 'pr', 'print')
-"call arpeggio#map('i', '', 0, 're', 'return ;<Left>')
-""Vimrc Arpeggio
-"call arpeggio#map('i', '', 0, 'pl', 'Plugin')
-""JavaScript arpeggio
-"call arpeggio#map('i', '', 0, 'co', 'console.log();<Left><Left>')
-""Python arpeggio
-"call arpeggio#map('i', '', 0, 'se', 'self.')
+"Arpeggio config
+"n : normal , i:insert , x:visual
+  "InsertMode
+call arpeggio#map('i', '', 0, 'jk', '<Esc>')
+  "VisualMode
+call arpeggio#map('x', '', 0, 'jk', '<Esc>')
+"Default Arpeggio
+call arpeggio#map('i', '', 0, 'fu', 'function')
+call arpeggio#map('i', '', 0, 'pr', 'print')
+call arpeggio#map('i', '', 0, 're', 'return ;<Left>')
+"Vimrc Arpeggio
+call arpeggio#map('i', '', 0, 'pl', 'Plugin')
+"JavaScript arpeggio
+call arpeggio#map('i', '', 0, 'co', 'console.log();<Left><Left>')
+"Python arpeggio
+call arpeggio#map('i', '', 0, 'se', 'self.')
+"GO arpeggio
+call arpeggio#map('i', '', 0, 'fm', 'fmt.Println()<Left>')
+
 
 "Supertab
 "use tab to autocomplete.
