@@ -1,3 +1,4 @@
+set shell=bash
 set nocompatible              " be iMproved, required
 set syntax=on
 set ruler
@@ -10,7 +11,6 @@ set autoindent
 "I move cursor to the first of line and enter insert mode
 "A move cursor to the end of line and enter insert mode
 nnoremap <CR> :noh<CR>
-
 "Disable Arrow
 noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
@@ -44,6 +44,9 @@ Plugin 'fatih/vim-go'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"*****emmet-vim*****
+" type html:5
+" type <c-y>,
 
 "*****Solarized color*****
 syntax enable
@@ -87,6 +90,9 @@ call arpeggio#map('i', '', 0, 'co', 'console.log();<Left><Left>')
 call arpeggio#map('i', '', 0, 'se', 'self.')
 "GO arpeggio
 call arpeggio#map('i', '', 0, 'fm', 'fmt.Println()<Left>')
+call arpeggio#map('i', '', 0, 'fg', 'func')
+"HTML arpeggio
+call arpeggio#map('i', '', 0, 'div', '<div class=""></div><Left><Left><Left><Left><Left><Left><Left><Left>')
 
 
 "Supertab
@@ -112,3 +118,36 @@ call arpeggio#map('i', '', 0, 'fm', 'fmt.Println()<Left>')
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+"Natural Split
+set splitbelow
+set splitright
+
+"Split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"""" RESIZING SPLIT """"
+"Max out the height of the current split
+"ctrl + w _
+
+"Max out the width of the current split
+"ctrl + w |
+
+"Normalize all split sizes, which is very handy when resizing terminal
+"ctrl + w =
+"
+"
+"""MORE SPLIT MANIPULATION"""
+"
+"Swap top/bottom or left/right split
+"Ctrl+W R
+
+"Break out current window into a new tabview
+"Ctrl+W T
+
+"Close every window in the current tabview but the current one
+"Ctrl+W o
+
