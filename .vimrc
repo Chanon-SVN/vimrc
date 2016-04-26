@@ -8,6 +8,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set t_Co=256
+
 "I move cursor to the first of line and enter insert mode
 "A move cursor to the end of line and enter insert mode
 nnoremap <CR> :noh<CR>
@@ -27,6 +29,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
+Plugin 'https://github.com/vim-scripts/oceandeep'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
@@ -50,8 +53,15 @@ filetype plugin indent on    " required
 
 "*****Solarized color*****
 syntax enable
-set background=dark
+"set background=light
+if has('gui_running')
+    set background=dark
+else
+    set background=light
+endif
+let g:solarized_termcolors=256
 color solarized
+"color oceandeep
 
 "*****NERDTree***** 
 "Ctrl+e for toggle NERDTree
@@ -95,30 +105,6 @@ call arpeggio#map('i', '', 0, 'fg', 'func')
 call arpeggio#map('i', '', 0, 'div', '<div class=""></div><Left><Left><Left><Left><Left><Left><Left><Left>')
 
 
-"Supertab
-"use tab to autocomplete.
-
-"Ctrl+p 
-"Use Ctrl+p to open file.
-
-
-"RESTART VIMRC
-":so %
-":so $MYVIMRC
-
-"VUNDLE USER GUDIE
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 "Natural Split
 set splitbelow
 set splitright
@@ -150,4 +136,31 @@ nnoremap <C-H> <C-W><C-H>
 
 "Close every window in the current tabview but the current one
 "Ctrl+W o
+
+
+
+
+"Supertab
+"use tab to autocomplete.
+
+"Ctrl+p 
+"Use Ctrl+p to open file.
+
+
+"RESTART VIMRC
+":so %
+":so $MYVIMRC
+
+"VUNDLE USER GUDIE
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
