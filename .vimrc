@@ -26,8 +26,10 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'Shougo/vimproc.vim'
+Plugin 'https://github.com/Quramy/tsuquyomi.git'
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'leafgarland/typescript-vim'
 Plugin 'https://github.com/altercation/vim-colors-solarized.git'
 Plugin 'https://github.com/vim-scripts/oceandeep'
 Plugin 'https://github.com/scrooloose/nerdtree.git'

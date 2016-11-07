@@ -15,3 +15,8 @@ vim ~/.vimrc
 
 ###If install YouCompletedMe please run
 bash aftervim.sh
+
+###If install typescript plugin
+## tsuquyomi vim for typescript
+npm -g install typescript
+
